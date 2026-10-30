@@ -1,0 +1,697 @@
+﻿
+/* ==================================
+   HUNTERNAVEEN PORTFOLIO
+   Professional Black + Subtle Red
+   ================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #f3f3f3;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+:root {
+    --background: #080808;
+    --surface: #101010;
+    --surface-light: #151515;
+    --red: #e04450;
+    --red-dark: #8e2932;
+    --white: #f3f3f3;
+    --grey: #a4a4a4;
+    --border: #262626;
+}
+
+/* NAVIGATION */
+
+.header {
+    min-height: 78px;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    background: #080808;
+    border-bottom: 1px solid #202020;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--red);
+    margin-left: 5px;
+}
+
+.header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 22px;
+}
+
+.header nav a {
+    color: #c1c1c1;
+    font-size: 12px;
+    transition: color 0.25s;
+}
+
+.header nav a:hover {
+    color: var(--red);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 600px;
+    padding: 85px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    background:
+        radial-gradient(
+            ellipse at 82% 40%,
+            rgba(224, 68, 80, 0.10),
+            transparent 38%
+        ),
+        var(--background);
+}
+
+.hero-content {
+    max-width: 580px;
+}
+
+.eyebrow {
+    color: var(--red);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    font-size: 66px;
+    line-height: 1.12;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span,
+.section-heading h2 span {
+    color: var(--red);
+}
+
+.hero h2 {
+    font-size: 17px;
+    font-weight: normal;
+    color: #d4d4d4;
+    margin-bottom: 18px;
+}
+
+.separator {
+    color: var(--red);
+    padding: 0 5px;
+}
+
+.hero-description {
+    max-width: 450px;
+    color: var(--grey);
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.25s;
+}
+
+.button-red {
+    background: var(--red);
+    color: #ffffff;
+    border: 1px solid var(--red);
+}
+
+.button-red:hover {
+    background: #c8323f;
+    border-color: #c8323f;
+}
+
+.button-outline {
+    border: 1px solid #444444;
+    color: #eeeeee;
+}
+
+.button-outline:hover {
+    border-color: var(--red);
+    color: var(--red);
+}
+
+.hero-note {
+    margin-top: 25px;
+    color: #777777;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+
+/* PROFILE PHOTO */
+
+.photo-frame {
+    width: 300px;
+    flex-shrink: 0;
+    padding: 8px;
+    border: 1px solid #52242a;
+    border-radius: 5px;
+    background: #111111;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.photo-frame img {
+    display: block;
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 2px;
+}
+
+.photo-caption {
+    padding: 12px 5px 5px;
+    color: #c4c4c4;
+    font-size: 11px;
+    text-align: center;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 7px;
+    border-radius: 50%;
+    background: var(--red);
+}
+
+/* GENERAL SECTIONS */
+
+.section {
+    padding: 85px 12%;
+    border-top: 1px solid #1b1b1b;
+    scroll-margin-top: 85px;
+}
+
+.section-heading {
+    margin-bottom: 28px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+}
+
+.section-intro {
+    color: var(--grey);
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.about-content {
+    max-width: 800px;
+}
+
+.about-content p {
+    color: var(--grey);
+    font-size: 14px;
+    margin-bottom: 17px;
+}
+
+/* SKILLS */
+
+.skills-section {
+    background: #0c0c0c;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 24px 20px;
+    min-height: 110px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    transition: border-color 0.25s;
+}
+
+.skill-item:hover {
+    border-color: var(--red-dark);
+}
+
+.skill-number {
+    color: var(--red);
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.skill-item span:last-child {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* PROJECTS */
+
+.projects-section {
+    background: #080808;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 235px;
+    padding: 27px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    transition: border-color 0.25s, transform 0.25s;
+}
+
+.project-card:hover {
+    border-color: #713039;
+    transform: translateY(-3px);
+}
+
+.project-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 23px;
+}
+
+.project-number {
+    color: var(--red);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.project-tag {
+    color: #888888;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.project-card h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.project-card > p {
+    color: var(--grey);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid #262626;
+}
+
+.project-footer span {
+    color: #999999;
+    font-size: 11px;
+}
+
+.project-footer a {
+    color: #ff7780;
+    font-size: 12px;
+}
+
+.project-footer a:hover {
+    color: #ffffff;
+}
+
+.featured-project {
+    border-color: #51252a;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(224, 68, 80, 0.07),
+            transparent 65%
+        ),
+        var(--surface);
+}
+
+/* HUNTERNEXUS FOUNDER SECTION */
+
+.founder-section {
+    position: relative;
+    overflow: hidden;
+    padding: 90px 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    background:
+        radial-gradient(
+            ellipse at 85% 50%,
+            rgba(224, 68, 80, 0.12),
+            transparent 40%
+        ),
+        #101010;
+    border-top: 1px solid #2a2020;
+    border-bottom: 1px solid #2a2020;
+    scroll-margin-top: 85px;
+}
+
+.founder-content {
+    max-width: 700px;
+    position: relative;
+    z-index: 1;
+}
+
+.founder-content h2 {
+    font-size: 42px;
+    line-height: 1.25;
+    letter-spacing: -1px;
+    margin-bottom: 22px;
+}
+
+.founder-content h2 span {
+    color: var(--red);
+}
+
+.founder-content > p:not(.eyebrow) {
+    max-width: 650px;
+    color: var(--grey);
+    font-size: 14px;
+}
+
+.founder-signature {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.signature-line {
+    display: block;
+    width: 35px;
+    height: 2px;
+    background: var(--red);
+}
+
+.founder-signature strong {
+    font-size: 13px;
+}
+
+.founder-signature p {
+    color: #999999;
+    font-size: 11px;
+}
+
+.founder-mark {
+    color: rgba(255, 255, 255, 0.035);
+    font-size: 100px;
+    font-weight: bold;
+    letter-spacing: -8px;
+    white-space: nowrap;
+}
+
+.founder-mark span {
+    color: rgba(224, 68, 80, 0.18);
+}
+
+/* CONTACT */
+
+.contact-section {
+    text-align: center;
+    padding-top: 85px;
+    padding-bottom: 85px;
+}
+
+.contact-section .section-heading {
+    margin-bottom: 18px;
+}
+
+.contact-description {
+    color: var(--grey);
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.email-address {
+    color: #c7c7c7;
+    font-size: 13px;
+    margin-top: 17px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 25px;
+}
+
+.social-links a {
+    color: #aaaaaa;
+    font-size: 12px;
+    transition: color 0.25s;
+}
+
+.social-links a:hover {
+    color: var(--red);
+}
+
+/* FOOTER */
+
+.footer {
+    padding: 28px 8%;
+    text-align: center;
+    border-top: 1px solid #222222;
+    background: #070707;
+}
+
+.footer-logo {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.footer-logo span {
+    color: var(--red);
+}
+
+.footer > p {
+    color: #999999;
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+.footer .copyright {
+    color: #666666;
+    margin-top: 15px;
+}
+
+/* TABLET */
+
+@media screen and (max-width: 900px) {
+
+    .header {
+        padding: 18px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header nav {
+        justify-content: flex-start;
+        gap: 12px 20px;
+    }
+
+    .hero {
+        padding: 65px 7%;
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .photo-frame {
+        width: 250px;
+    }
+
+    .photo-frame img {
+        height: 320px;
+    }
+
+    .section {
+        padding: 70px 8%;
+    }
+
+    .founder-section {
+        padding: 75px 8%;
+    }
+
+    .skills-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 600px) {
+
+    .header {
+        position: relative;
+        padding: 17px 6%;
+        gap: 15px;
+    }
+
+    .header nav {
+        gap: 8px 15px;
+    }
+
+    .header nav a {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: auto;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        padding: 42px 7% 55px;
+        gap: 32px;
+    }
+
+    .photo-frame {
+        width: 220px;
+        align-self: center;
+    }
+
+    .photo-frame img {
+        height: 270px;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .hero h2 {
+        font-size: 15px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .hero-note {
+        font-size: 10px;
+    }
+
+    .section {
+        padding: 58px 7%;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .skills-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .skill-item {
+        padding: 18px 14px;
+        min-height: 95px;
+    }
+
+    .skill-item span:last-child {
+        font-size: 13px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .project-card {
+        min-height: 210px;
+        padding: 23px;
+    }
+
+    .founder-section {
+        padding: 60px 7%;
+    }
+
+    .founder-content h2 {
+        font-size: 33px;
+    }
+
+    .founder-mark {
+        display: none;
+    }
+
+    .contact-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .footer {
+        padding: 25px 6%;
+    }
+}
